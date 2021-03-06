@@ -1,0 +1,45 @@
+# Spanish translations for PACKAGE package
+# Traducciones al español para el paquete PACKAGE.
+# Copyright (C) 2015 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# root <turulomio@yahoo.es>, 2015, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: translate_odf\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-06 20:55+0100\n"
+"PO-Revision-Date: 2020-04-03 08:54+0200\n"
+"Last-Translator: trabajo <turulomio@yahoo.es>\n"
+"Language-Team: Spanish <kde-i18n-doc@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+msgid "Moves ancient files from a directory to another one. Then you can backup result"
+msgstr ""
+
+msgid "Directory from"
+msgstr ""
+
+msgid "Directory to"
+msgstr ""
+
+msgid "Days old of the files to move"
+msgstr ""
+
+msgid "Creates an automatic example to show features in ancient_example directory"
+msgstr ""
+
+msgid "Removes example directory"
+msgstr ""
+
+msgid "You must set a to directory"
+msgstr ""
+
+msgid "Developed by Mariano Muñoz 2020-{}"
+msgstr "Desarrollado por Mariano Muñoz 2020-{}"
+
