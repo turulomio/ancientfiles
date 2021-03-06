@@ -50,6 +50,7 @@ def process(source,destiny,days_old,write):
             if mtime<cut:
                 destiny_file=filename.replace(source,destiny)
                 if write is True:
+                    makedirs(path.dirname(destiny_file), exist_ok=True)
                     move(filename, destiny_file )
                     print(_(f"  - Moving '{filename}' >> '{destiny_file}'. {(cut-mtime).days} days"))
                 else:
