@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-06 20:55+0100\n"
+"POT-Creation-Date: 2021-03-07 06:49+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,25 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+msgid "Creating example files"
+msgstr ""
+
+msgid "Processing example pretending"
+msgstr ""
+
+msgid "Processing example moving with --write parameter"
+msgstr ""
+
+msgid "  - Moving '{filename}' >> '{destiny_file}'. {(cut-mtime).days} days"
+msgstr ""
+
+msgid "  - Will be moved '{filename}' >> '{destiny_file}'. {(cut-mtime).days} days"
+msgstr ""
+
+#, python-brace-format
+msgid "Found {count} files in '{source}'. {move_count} files will be moved."
+msgstr ""
 
 msgid "Moves ancient files from a directory to another one. Then you can backup result"
 msgstr ""
@@ -29,6 +48,9 @@ msgstr ""
 msgid "Days old of the files to move"
 msgstr ""
 
+msgid "Moves files instead of showing changes"
+msgstr ""
+
 msgid "Creates an automatic example to show features in ancient_example directory"
 msgstr ""
 
@@ -38,5 +60,5 @@ msgstr ""
 msgid "You must set a to directory"
 msgstr ""
 
-msgid "Developed by Mariano Muñoz 2020-{}"
+msgid "Developed by Mariano Muñoz 2021-{}"
 msgstr ""

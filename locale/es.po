@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translate_odf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-06 20:55+0100\n"
+"POT-Creation-Date: 2021-03-07 06:46+0100\n"
 "PO-Revision-Date: 2020-04-03 08:54+0200\n"
 "Last-Translator: trabajo <turulomio@yahoo.es>\n"
 "Language-Team: Spanish <kde-i18n-doc@kde.org>\n"
@@ -18,6 +18,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 19.12.3\n"
+
+msgid "Creating example files"
+msgstr "Crando ficheros de ejemplo"
+
+msgid "Processing example pretending"
+msgstr ""
+
+msgid "Processing example moving with --write parameter"
+msgstr ""
+
+msgid "  - Moving '{filename}' >> '{destiny_file}'. {(cut-mtime).days} days"
+msgstr "  - Moviendo '{filename}' >> '{destiny_file}'. {(cut-mtime).days} días"
+
+msgid "  - Will be moved '{filename}' >> '{destiny_file}'. {(cut-mtime).days} days"
+msgstr "  - Será movido '{filename}' >> '{destiny_file}'. {(cut-mtime).days} días"
+
+#, python-brace-format
+msgid "Found {count} files in '{source}'. {move_count} files will be moved."
+msgstr "Encontrados {count} ficheros en '{source}'. {move_count} ficheros serán movidos."
 
 msgid "Moves ancient files from a directory to another one. Then you can backup result"
 msgstr ""
@@ -31,15 +50,17 @@ msgstr ""
 msgid "Days old of the files to move"
 msgstr ""
 
+msgid "Moves files instead of showing changes"
+msgstr ""
+
 msgid "Creates an automatic example to show features in ancient_example directory"
 msgstr ""
 
 msgid "Removes example directory"
-msgstr ""
+msgstr "Borra el directorio de ejemplo"
 
 msgid "You must set a to directory"
 msgstr ""
 
-msgid "Developed by Mariano Muñoz 2020-{}"
-msgstr "Desarrollado por Mariano Muñoz 2020-{}"
-
+msgid "Developed by Mariano Muñoz 2021-{}"
+msgstr "Desarrollado por Mariano Muoz 2021-{}"
