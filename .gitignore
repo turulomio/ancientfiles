@@ -14,7 +14,8 @@ __pycache__/
 
 dist/
 doc/html/
-doc/translate_odf.tag
-translate_odf.e4p
-translate_odf.egg-info/
-translate_odf/objects/locale/
+doc/ancient.tag
+ancient.e4p
+ancient.egg-info/
+ancient_example/
+build/
