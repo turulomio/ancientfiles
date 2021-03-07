@@ -2,9 +2,9 @@ from datetime import datetime
 from gettext import translation
 from pkg_resources import resource_filename
 
-__versiondatetime__ = datetime(2021, 3, 7)
+__versiondatetime__ = datetime(2021, 3, 7, 7, 3)
 __versiondate__=__versiondatetime__.date()
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 
 try:
     t=translation('ancientfiles', resource_filename("ancientfiles","locale"))
