@@ -1,22 +1,23 @@
 import argparse
-import gettext
+from gettext import translation
 from datetime import datetime, timedelta
 from glob import iglob
-from os import path,remove, makedirs, utime
+from os import path, makedirs, utime
 from shutil import rmtree, move
-import pkg_resources
-import subprocess
-import sys
+from sys import exit
+from pkg_resources import resource_filename
 
-from ancient.version import argparse_epilog,  __version__
+from ancient.version import argparse_epilog
 
 try:
-    t=gettext.translation('ancient',pkg_resources.resource_filename("ancient","locale"))
+    t=translation('ancient', resource_filename("ancient","locale"))
     _=t.gettext
 except:
     _=str
 
 ## Creates an empty file with a specific mtime
+## @param path String with the file to create
+## @param mtime Datetime with the file modification datetime
 def create_empty_file(path, mtime):
     f=open(path,"w")
     f.close()
@@ -35,19 +36,27 @@ def example_create(days_old):
     create_empty_file(f"{source}/more1year.txt", datetime.now()-timedelta(days=367))
     create_empty_file(f"{source}/more2year.txt", datetime.now()-timedelta(days=367*2))
     print(_("Processing example pretending"))
-    process(source, destiny, days_old, False)
+    move_files(source, destiny, days_old, False)
     print(_("Processing example moving with --write parameter"))
-    process(source, destiny, days_old, True)
+    move_files(source, destiny, days_old, True)
 
 def example_remove():
     rmtree("ancient_example",ignore_errors=True)
 
-def process(source,destiny,days_old,write):
+## Main function
+## @param source String with the source directory
+## @param destiny String with the destiny directory
+## @param days_old Integer with the number of days 
+## @param write Boolean set to move files if it's True. If False shows report
+def move_files(source,destiny,days_old,write):
     cut=datetime.now()-timedelta(days=days_old)
+    count, move_count= 0,  0
     for filename in iglob(source + '**/**', recursive=True):
         if path.isfile(filename):
+            count+=1
             mtime=datetime.fromtimestamp(path.getmtime(filename))
             if mtime<cut:
+                move_count+=1
                 destiny_file=filename.replace(source,destiny)
                 if write is True:
                     makedirs(path.dirname(destiny_file), exist_ok=True)
@@ -55,8 +64,7 @@ def process(source,destiny,days_old,write):
                     print(_(f"  - Moving '{filename}' >> '{destiny_file}'. {(cut-mtime).days} days"))
                 else:
                     print(_(f"  - Will be moved '{filename}' >> '{destiny_file}'. {(cut-mtime).days} days"))
-
-
+    print(_(f"Found {count} files in '{source}'. {move_count} files will be moved."))
 
 def main():
     parser=argparse.ArgumentParser(prog='ancient', description=_('Moves ancient files from a directory to another one. Then you can backup result'), epilog=argparse_epilog(), formatter_class=argparse.RawTextHelpFormatter)
@@ -73,7 +81,7 @@ def main():
         if args.destiny is None:
             print(_("You must set a to directory"))
             exit(1)
-        process(args.source,args.destiny,args.days_old,args.write)
+        move_files(args.source,args.destiny,args.days_old,args.write)
     elif args.create_example:
         example_create(args.days_old)
     elif args.remove_example:
