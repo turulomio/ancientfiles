@@ -1,6 +1,6 @@
 include LICENSE.txt  *.py
 recursive-include locale *.po 
-recursive-include ancient *.py *.mo *.odt
-recursive-include ancient/images *.png
+recursive-include ancientfiles *.py *.mo *.odt
+recursive-include ancientfiles/images *.png
 prune __pycache__
 global-exclude *.pyc

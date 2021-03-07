@@ -14,8 +14,8 @@ __pycache__/
 
 dist/
 doc/html/
-doc/ancient.tag
-ancient.e4p
-ancient.egg-info/
-ancient_example/
+doc/ancientfiles.tag
+ancientfiles.e4p
+ancientfiles.egg-info/
+ancientfiles_example/
 build/

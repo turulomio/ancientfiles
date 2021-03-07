@@ -18,9 +18,9 @@ class Doc(Command):
 
     def run(self):
         #es
-        os.system("xgettext -L Python --no-wrap --no-location --from-code='UTF-8' -o locale/ancient.pot *.py ancient/*.py")
-        os.system("msgmerge -N --no-wrap -U locale/es.po locale/ancient.pot")
-        os.system("msgfmt -cv -o ancient/locale/es/LC_MESSAGES/ancient.mo locale/es.po")
+        os.system("xgettext -L Python --no-wrap --no-location --from-code='UTF-8' -o locale/ancientfiles.pot *.py ancientfiles/*.py")
+        os.system("msgmerge -N --no-wrap -U locale/es.po locale/ancientfiles.pot")
+        os.system("msgfmt -cv -o ancientfiles/locale/es/LC_MESSAGES/ancientfiles.mo locale/es.po")
 
 class Procedure(Command):
     description = "Show release procedure"
@@ -41,7 +41,7 @@ class Procedure(Command):
   * python setup.py doc
   * python setup.py install
   * python setup.py doxygen
-  * git commit -a -m 'ancient-{}'
+  * git commit -a -m 'ancientfiles-{}'
   * git push
   * Hacer un nuevo tag en GitHub
   * python setup.py sdist upload -r pypi
@@ -68,7 +68,7 @@ class Doxygen(Command):
         os.system("rm -Rf build")
         os.chdir("doc")
         os.system("doxygen Doxyfile")
-        os.system("rsync -avzP -e 'ssh -l turulomio' html/ frs.sourceforge.net:/home/users/t/tu/turulomio/userweb/htdocs/doxygen/ancient/ --delete-after")
+        os.system("rsync -avzP -e 'ssh -l turulomio' html/ frs.sourceforge.net:/home/users/t/tu/turulomio/userweb/htdocs/doxygen/ancientfiles/ --delete-after")
         os.chdir("..")
 
 ## Class to define uninstall command
@@ -84,26 +84,26 @@ class Uninstall(Command):
 
     def run(self):
         if platform.system()=="Linux":
-            os.system("rm -Rf {}/ancient*".format(site.getsitepackages()[0]))
-            os.system("rm /usr/bin/ancient*")
+            os.system("rm -Rf {}/ancientfiles*".format(site.getsitepackages()[0]))
+            os.system("rm /usr/bin/ancientfiles*")
         else:
-            os.system("pip uninstall ancient")
+            os.system("pip uninstall ancientfiles")
 
 ########################################################################
 
 
 ## Version of modele captured from version to avoid problems with package dependencies
 __version__= None
-with open('ancient/version.py', encoding='utf-8') as f:
+with open('ancientfiles/version.py', encoding='utf-8') as f:
     for line in f.readlines():
         if line.find("__version__ =")!=-1:
             __version__=line.split("'")[1]
 
 
-setup(name='ancient',
+setup(name='ancientfiles',
      version=__version__,
      description='Moves ancient files from a directory to another selecting is age. Then you can backup them.',
-     long_description='Project web page is in https://github.com/turulomio/ancient',
+     long_description='Project web page is in https://github.com/turulomio/ancientfiles',
      long_description_content_type='text/markdown',
      classifiers=['Development Status :: 4 - Beta',
                   'Intended Audience :: Developers',
@@ -112,14 +112,14 @@ setup(name='ancient',
                   'Programming Language :: Python :: 3',
                  ], 
      keywords='move old files backup',
-     url='https://github.com/turulomio/ancient',
+     url='https://github.com/turulomio/ancientfiles',
      author='Turulomio',
      author_email='turulomio@yahoo.es',
      license='GPL-3',
-     packages=['ancient'],
+     packages=['ancientfiles'],
      install_requires=[''],
      entry_points = {'console_scripts': [
-                                           'ancient=ancient.core:main',
+                                           'ancientfiles=ancientfiles.core:main',
                                         ],
                     },
      cmdclass={'doxygen': Doxygen,

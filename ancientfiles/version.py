@@ -7,7 +7,7 @@ __versiondate__=__versiondatetime__.date()
 __version__ = '0.1.0'
 
 try:
-    t=translation('ancient', resource_filename("ancient","locale"))
+    t=translation('ancientfiles', resource_filename("ancientfiles","locale"))
     _=t.gettext
 except:
     _=str
