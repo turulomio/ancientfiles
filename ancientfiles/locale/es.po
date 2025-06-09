@@ -38,13 +38,13 @@ msgid "Directory to"
 msgstr ""
 
 msgid "Days old of the files to move"
-msgstr ""
+msgstr "Días de antigüedad de los ficheros a mover"
 
 msgid "Moves files instead of showing changes"
-msgstr ""
+msgstr "Mueve los ficheros en lugar de mostrar los cambios"
 
 msgid "Creates an automatic example to show features in ancientfiles_example directory"
-msgstr ""
+msgstr "Crea un ejemplo automático para mostrar las características en el directorio ancientfiles_example"
 
 msgid "Removes example directory"
 msgstr "Borra el directorio de ejemplo"

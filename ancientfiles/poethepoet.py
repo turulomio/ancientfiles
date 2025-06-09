@@ -15,11 +15,13 @@ def release():
   * Crear un issue en Github, una branch asociada, pegar el código que propone Github
   * Cambiar la versión y la fecha en __init__.py
   * Cambiar la versión en pyproject.toml
+  * poe release
   * poe translate
   * Update ancientfiles/locale/*.po
   * poe translate
   * git commit -a -m 'ancientfiles-{}'
   * git push
+  * Hacer un pull request para unir la versión
   * Hacer un nuevo tag en GitHub
   * poetry build
   * poetry publish --username --password
