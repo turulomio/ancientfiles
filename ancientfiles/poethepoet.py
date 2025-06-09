@@ -12,18 +12,17 @@ def translate():
 
 def release():
     print("""Nueva versión:
-  * Cambiar la versión y la fecha en version.py
-  * Modificar el Changelog en README
-  * python setup.py doc
-  * Update locale/*.po
-  * python setup.py doc
-  * python setup.py install
-  * python setup.py doxygen
+  * Crear un issue en Github, una branch asociada, pegar el código que propone Github
+  * Cambiar la versión y la fecha en __init__.py
+  * Cambiar la versión en pyproject.toml
+  * poe translate
+  * Update ancientfiles/locale/*.po
+  * poe translate
   * git commit -a -m 'ancientfiles-{}'
   * git push
   * Hacer un nuevo tag en GitHub
-  * python setup.py sdist upload -r pypi
-  * python setup.py uninstall
+  * poetry build
+  * poetry publish --username --password
   * Crea un nuevo ebuild de Gentoo con la nueva versión
   * Subelo al repositorio del portage
 """.format(__version__))
