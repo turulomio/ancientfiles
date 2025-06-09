@@ -2,9 +2,9 @@ from datetime import datetime
 from gettext import translation
 from importlib import resources
 
-__versiondatetime__ = datetime(2021, 3, 7, 7, 3)
+__versiondatetime__ = datetime(2025, 6, 9, 19, 43)
 __versiondate__=__versiondatetime__.date()
-__version__ = '0.2.0'
+__version__ = '0.3.0'
 
 try:
     t=translation('ancientfiles', resources.path("ancientfiles","locale"))

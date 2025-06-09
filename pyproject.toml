@@ -1,6 +1,6 @@
 [project]
 name = "ancientfiles"
-version = "0.2.0"
+version = "0.3.0"
 description = "Moves ancient files from a directory to another selecting is age. Then you can backup them."
 authors = [
     {name = "turulomio",email = "turulomio@yahoo.es"}
