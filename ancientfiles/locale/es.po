@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translate_odf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-07 07:04+0100\n"
+"POT-Creation-Date: 2025-06-09 19:29+0200\n"
 "PO-Revision-Date: 2020-04-03 08:54+0200\n"
 "Last-Translator: trabajo <turulomio@yahoo.es>\n"
 "Language-Team: Spanish <kde-i18n-doc@kde.org>\n"
@@ -27,16 +27,6 @@ msgstr ""
 
 msgid "Processing example moving with --write parameter"
 msgstr ""
-
-msgid "  - Moving '{filename}' >> '{destiny_file}'. {(cut-mtime).days} days"
-msgstr "  - Moviendo '{filename}' >> '{destiny_file}'. {(cut-mtime).days} días"
-
-msgid "  - Will be moved '{filename}' >> '{destiny_file}'. {(cut-mtime).days} days"
-msgstr "  - Será movido '{filename}' >> '{destiny_file}'. {(cut-mtime).days} días"
-
-#, python-brace-format
-msgid "Found {count} files in '{source}'. {move_count} files will be moved."
-msgstr "Encontrados {count} ficheros en '{source}'. {move_count} ficheros serán movidos."
 
 msgid "Moves ancient files from a directory to another one. Then you can backup result"
 msgstr ""
@@ -64,3 +54,13 @@ msgstr ""
 
 msgid "Developed by Mariano Muñoz 2021-{}"
 msgstr "Desarrollado por Mariano Muoz 2021-{}"
+
+#~ msgid "  - Moving '{filename}' >> '{destiny_file}'. {(cut-mtime).days} days"
+#~ msgstr "  - Moviendo '{filename}' >> '{destiny_file}'. {(cut-mtime).days} días"
+
+#~ msgid "  - Will be moved '{filename}' >> '{destiny_file}'. {(cut-mtime).days} days"
+#~ msgstr "  - Será movido '{filename}' >> '{destiny_file}'. {(cut-mtime).days} días"
+
+#, python-brace-format
+#~ msgid "Found {count} files in '{source}'. {move_count} files will be moved."
+#~ msgstr "Encontrados {count} ficheros en '{source}'. {move_count} ficheros serán movidos."

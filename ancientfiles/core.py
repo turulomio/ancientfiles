@@ -5,12 +5,13 @@ from glob import iglob
 from os import path, makedirs, utime
 from shutil import rmtree, move
 from sys import exit
-from pkg_resources import resource_filename
+from importlib import resources
 
-from ancientfiles.version import argparse_epilog
+
+from ancientfiles import argparse_epilog
 
 try:
-    t=translation('ancientfiles', resource_filename("ancientfiles","locale"))
+    t=translation('ancientfiles', resources.path("ancientfiles","locale"))
     _=t.gettext
 except:
     _=str
