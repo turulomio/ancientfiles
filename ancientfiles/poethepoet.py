@@ -21,6 +21,7 @@ def release():
   * poe translate
   * git commit -a -m 'ancientfiles-{}'
   * git push
+  * Hacer un pull request para unir la versión
   * Hacer un nuevo tag en GitHub
   * poetry build
   * poetry publish --username --password
