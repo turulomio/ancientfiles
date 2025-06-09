@@ -12,10 +12,3 @@ Doxygen documentation:
 Pypi web page:
     https://pypi.org/project/ancientfiles/
 
-# Changelog
-
-## 0.2.0
-    - Renamed project ancient to ancientfiles due to it already exists in pypi
-
-## 0.1.0
-    - First version and works fine

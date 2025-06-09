@@ -1,0 +1,31 @@
+[project]
+name = "ancientfiles"
+version = "0.2.0"
+description = "Moves ancient files from a directory to another selecting is age. Then you can backup them."
+authors = [
+    {name = "turulomio",email = "turulomio@yahoo.es"}
+]
+license = {text = "GPL-3"}
+readme = "README.md"
+requires-python = ">=3.11,<4"
+dependencies = [
+]
+
+[tool.poetry.scripts]
+ancientfiles='ancientfiles.core:main'
+
+
+[tool.poetry.group.dev.dependencies]
+poetry = ">=1.8.3"
+poethepoet = ">=0.29.0"
+pytest = ">=8.3.3"
+coverage = ">=7.6.1"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poe.tasks]
+release = { script = "ancientfiles.poethepoet:release" }
+translate = { script = "ancientfiles.poethepoet:translate" }

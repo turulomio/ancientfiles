@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-07 07:04+0100\n"
+"POT-Creation-Date: 2025-06-09 19:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,16 +24,6 @@ msgid "Processing example pretending"
 msgstr ""
 
 msgid "Processing example moving with --write parameter"
-msgstr ""
-
-msgid "  - Moving '{filename}' >> '{destiny_file}'. {(cut-mtime).days} days"
-msgstr ""
-
-msgid "  - Will be moved '{filename}' >> '{destiny_file}'. {(cut-mtime).days} days"
-msgstr ""
-
-#, python-brace-format
-msgid "Found {count} files in '{source}'. {move_count} files will be moved."
 msgstr ""
 
 msgid "Moves ancient files from a directory to another one. Then you can backup result"
